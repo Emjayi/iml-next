@@ -1,20 +1,17 @@
-
-import Image from "next/image";
-import LanguageSelector from "@/components/LanguageSelector";
 import { getDictionary } from "@/components/Dictionaries";
-
+import { Button } from "@nextui-org/button";
+import Hero from "@/components/Hero/index";
+import Slider from "@/components/Slider";
 
 export default async function Page({ params }: any) {
-  const { title, description } = await getDictionary(params.lang); // en
+  const { title1, title2, description } = await getDictionary(params.lang); // en
 
   return (
     <>
       <main className="mt-5 w-[100%]">
-        <div className="w-[60%] mx-auto text-center mt-20">
-          < h1 className="text-2xl">{title}</h1>
-          <p className="text-base mt-10">{description}</p>
-        </div>
-      </main>
+        <Hero title={title1} title2={title2} description={description} />
+        <Slider />
+      </main >
     </>
   );
 }

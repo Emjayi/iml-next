@@ -1,30 +1,39 @@
 'use client'
 import * as  React from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
 export default () => {
     const router = useRouter();
     const pathname = usePathname();
     const langs = [
-        { lang: "/en", fullName: "English", shortName: "EN" },
-        { lang: "/fa", fullName: "Persian", shortName: "FA" },
+        { lang: "/en" },
+        { lang: "/fa" },
     ];
-    const [currentLang, setCurrentLang] = useState();
-    function handleLangChange({ lang }: { lang: string; fullName: string }) {
-        const language = lang ? "/" + lang : "/en";
+    const [currentLang, setCurrentLang] = useState("");
+    useEffect(() => {
+        if (pathname.includes(langs[0].lang)) setCurrentLang("English")
+        else setCurrentLang("Persian")
+    })
+    function handleLangChange() {
+        const language = "/en";
         router.push(`${language}`);
     }
     return (
-        <select>
-            {langs.map((lang) => (
-                <option
-                    key={lang.lang}
-                    defaultValue={currentLang}
-                    onClick={() => handleLangChange(lang)}
-                >
-                    {lang.fullName}
-                </option>
-            ))}
-        </select>
+        <Select>
+            <SelectTrigger className="w-[120px]" onChange={console.log("clicked")}>
+                <SelectValue placeholder={currentLang} />
+            </SelectTrigger>
+            <SelectContent>
+                <SelectItem value="en">English</SelectItem>
+                <SelectItem value="fa">Persian</SelectItem>
+            </SelectContent>
+        </Select>
     );
 };
