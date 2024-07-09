@@ -11,6 +11,7 @@ const index = ({ text, del }: any) => {
             transition={{ duration: 0.5, delay: .2 }}>
             {newText.map((word: string, index: number) => (
                 <motion.span
+                    key={index}
                     className=''
                     initial={{ y: "100%", opacity: 0 }}
                     animate={{ y: "0%", opacity: 1 }}

@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import React, { useRef } from 'react'
 
-const index = (...props: any) => {
+const Index = (...props: any) => {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -25,4 +25,4 @@ const index = (...props: any) => {
     )
 }
 
-export default index
+export default Index
