@@ -1,0 +1,50 @@
+{
+    "Layout": {
+        "metaData": {
+            "title": "IML Pooyesh Abzar",
+            "description": "IML Technology"
+        }
+    },
+    "Header": {
+        "home": "home",
+        "services": "services",
+        "productionLines": "production lines",
+        "contact": "contact us",
+        "number": "051 3612 6622"
+    },
+    "Home": {
+        "title1": "European Quality",
+        "title2": "Iranian Innovation",
+        "description": "Pooyesh Abzar Pars Company has 16 years of experience in the field of designing and manufacturing plastic injection molds, plastic injection machines and automation of plastic parts production. Pooyesh Abzar Pars Company was established in 2006 and since then it has focused on designing and manufacturing IML injection molds and designing and installing IML labeled packaging production lines. Pooyesh Abzar Pars Company collaborates with European and Asian companies to supply various components of IML production lines and install and commission them at the customer's site."
+    },
+    "Services": {
+        "title": "Services",
+        "description": "experience in the field of designing and manufacturing plastic"
+    },
+    "allServices": {
+        "PlasticInjectionMachines": {
+            "title": "Plastic injection machines",
+            "desc": "Plastic injection machines"
+        },
+        "ThermoformingMachine": {
+            "title": "Thermoforming machine",
+            "desc": "Thermoforming machine"
+        },
+        "PlasticInjectionTemplate": {
+            "title": "Plastic injection template",
+            "desc": "Plastic injection template"
+        },
+        "Robots": {
+            "title": "Robots",
+            "desc": "Robots"
+        },
+        "Accessories": {
+            "title": "Accessories",
+            "desc": "Accessories"
+        }
+    },
+    "ProductionLines": {
+        "title": "Production Lines",
+        "description": "experience in the field of designing and manufacturing plastic"
+    }
+}

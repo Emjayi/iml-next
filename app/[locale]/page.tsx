@@ -1,8 +1,8 @@
-import Hero from "@/components/Hero/index";
-import Slider from "@/components/Slider";
+import Hero from "@/components/Home/Hero/index";
+import Services from "@/components/Home/Services";
+import Slider from "@/components/Home/Slider";
 import { useTranslations } from "next-intl";
 export default function Home() {
-  // const { title1, title2, description } = await getDictionary(params.lang); // en
   const t = useTranslations('Home');
 
   return (
@@ -10,6 +10,10 @@ export default function Home() {
       <main className="mt-5 w-[100%]">
         <Hero title={t("title1")} title2={t("title2")} description={t("description")} />
         <Slider />
+        <Services />
+        <div className="flex bottom-0 w-full flex-col justify-end items-center text-xl text-black h-[30vh]">
+          <h2>Made in Khatoon Advertising</h2>
+        </div>
       </main >
     </>
   );
