@@ -80,7 +80,7 @@ export default function Page() {
             >
                 <Image src={`${service?.image}`} width={1000} height={1000} alt="hero" className="w-screen h-96"></Image>
                 <h1 className="text-xl">{service.title}</h1>
-                <p className="mt-2">{service.description}</p>
+                <p className="mt-2 text-justify">{service.description}</p>
             </motion.div>
             <motion.div
                 className="flex flex-col h-[50dvh] justify-start items-center"

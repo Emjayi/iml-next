@@ -8,7 +8,7 @@ const Hero = ({ title, title2, description }: any) => {
     const t = useTranslations('allServices')
 
     return (
-        <div className="lg:w-[60%] h-[90dvh] flex flex-col items-center justify-center mx-auto text-center">
+        <div className="lg:w-[60%] h-[90dvh] flex flex-col items-center justify-center mx-auto text-justify">
             <motion.div
                 animate={{ y: -40 }}
                 transition={{ delay: 1.5, duration: 1 }}

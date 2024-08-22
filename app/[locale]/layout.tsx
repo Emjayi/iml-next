@@ -3,7 +3,7 @@ import { Inter, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Header from "@/components/Layout/Header";
-
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { Locale, locales } from "@/i18n.config";
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, getMessages } from 'next-intl/server';
@@ -57,7 +57,7 @@ async function LocaleLayoutContent({
   dir: string;
 }) {
   const messages = await getMessages();
-
+  unstable_setRequestLocale(locale);
   return (
     <html lang={locale} dir={dir}>
       <body className={inter.className}>
