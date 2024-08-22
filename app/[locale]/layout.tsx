@@ -38,6 +38,8 @@ export default function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+
+  unstable_setRequestLocale(locale);
   const dir = useTextDirection();
 
   return (
@@ -57,7 +59,6 @@ async function LocaleLayoutContent({
   dir: string;
 }) {
   const messages = await getMessages();
-  unstable_setRequestLocale(locale);
   return (
     <html lang={locale} dir={dir}>
       <body className={inter.className}>
