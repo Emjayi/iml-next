@@ -4,8 +4,10 @@ import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll, useSpring, useTransform, useVelocity } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Page() {
+export default function Page({ params: { locale } }: any) {
+    unstable_setRequestLocale(locale);
     const t1 = useTranslations('allServices');
     const services = [
         {

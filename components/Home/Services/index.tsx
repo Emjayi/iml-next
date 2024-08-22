@@ -3,9 +3,11 @@ import ServTitle from './ServTitle';
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n.config';
 import Service from './Service';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 
-export default function ServicesHome() {
+export default function ServicesHome({ params: { locale } }: any) {
+    unstable_setRequestLocale(locale);
     const t = useTranslations('allServices');
     const services = [
         {

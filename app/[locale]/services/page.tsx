@@ -4,8 +4,10 @@ import { useTranslations } from "next-intl";
 import { Link } from '@/i18n.config';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-const Page = () => {
+const Page = ({ params: { locale } }: any) => {
+    unstable_setRequestLocale(locale);
     const t = useTranslations('Services');
     const t1 = useTranslations('allServices');
     const services = [

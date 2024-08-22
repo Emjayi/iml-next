@@ -2,9 +2,10 @@ import Hero from "@/components/Home/Hero/index";
 import Services from "@/components/Home/Services";
 import Slider from "@/components/Home/Slider";
 import { useTranslations } from "next-intl";
-export default function Home() {
+import { unstable_setRequestLocale } from "next-intl/server";
+export default function Home({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('Home');
-
   return (
     <>
       <main className="mt-5 w-[100%]">

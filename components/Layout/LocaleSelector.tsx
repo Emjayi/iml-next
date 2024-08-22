@@ -12,6 +12,7 @@ import Image from "next/image";
 import iran from "@/public/flags/iran.webp"
 import usa from "@/public/flags/usa.png"
 import { useState } from "react";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export default function LocaleSwitcher({
     locale,
@@ -22,6 +23,7 @@ export default function LocaleSwitcher({
     // route without the locale e.g. `/about`...
     const pathname = usePathname();
     const router = useRouter();
+    unstable_setRequestLocale(locale);
 
     const changeLocale = (
         event: React.ChangeEvent<HTMLSelectElement>,

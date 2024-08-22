@@ -4,7 +4,9 @@ import React from 'react'
 import Title from './Title'
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n.config';
-const Hero = ({ title, title2, description }: any) => {
+import { unstable_setRequestLocale } from 'next-intl/server';
+const Hero = ({ title, title2, description }: any, { params: { locale } }: any) => {
+    unstable_setRequestLocale(locale);
     const t = useTranslations('allServices')
 
     return (

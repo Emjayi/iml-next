@@ -1,9 +1,6 @@
 "use client"
-
 import { Link } from "@/i18n.config";
-import clsx from "clsx";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 

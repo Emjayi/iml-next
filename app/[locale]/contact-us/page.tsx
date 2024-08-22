@@ -1,8 +1,10 @@
 import React from 'react'
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-const Page = () => {
+const Page = ({ params: { locale } }: any) => {
     const t = useTranslations('Home');
+    unstable_setRequestLocale(locale);
     return (
         <div className='h-[120dvh] flex flex-col justify-start items-center mt-8'>
             <h1 className='text-6xl'>Contact us</h1>
