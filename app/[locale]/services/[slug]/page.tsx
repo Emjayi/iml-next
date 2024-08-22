@@ -6,8 +6,7 @@ import { motion, useMotionValueEvent, useScroll, useSpring, useTransform, useVel
 import { useEffect, useRef, useState } from "react";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Page({ params: { locale } }: any) {
-    unstable_setRequestLocale(locale);
+export default function Page() {
     const t1 = useTranslations('allServices');
     const services = [
         {

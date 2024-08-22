@@ -23,7 +23,6 @@ export default function LocaleSwitcher({
     // route without the locale e.g. `/about`...
     const pathname = usePathname();
     const router = useRouter();
-    unstable_setRequestLocale(locale);
 
     const changeLocale = (
         event: React.ChangeEvent<HTMLSelectElement>,
