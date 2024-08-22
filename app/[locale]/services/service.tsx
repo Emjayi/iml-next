@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion";
 import { Link } from '@/i18n.config';
 import { useState } from "react";
